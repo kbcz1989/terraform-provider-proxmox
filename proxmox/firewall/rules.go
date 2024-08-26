@@ -30,18 +30,18 @@ type Rule interface {
 
 // BaseRule is the base struct for firewall rules.
 type BaseRule struct {
-	Comment  *string           `json:"comment,omitempty"   url:"comment,omitempty"`
-	Dest     *string           `json:"dest,omitempty"      url:"dest,omitempty"`
+	Comment  *string           `json:"comment"   url:"comment"`
+	Dest     *string           `json:"dest"      url:"dest"`
 	Digest   *string           `json:"digest,omitempty"    url:"digest,omitempty"`
-	DPort    *string           `json:"dport,omitempty"     url:"dport,omitempty"`
-	Enable   *types.CustomBool `json:"enable,omitempty"    url:"enable,omitempty,int"`
-	ICMPType *string           `json:"icmp-type,omitempty" url:"icmp-type,omitempty"`
+	DPort    *string           `json:"dport"     url:"dport"`
+	Enable   *types.CustomBool `json:"enable"    url:"enable,int"`
+	ICMPType *string           `json:"icmp-type" url:"icmp-type"`
 	IFace    *string           `json:"iface,omitempty"     url:"iface,omitempty"`
 	Log      *string           `json:"log,omitempty"       url:"log,omitempty"`
-	Macro    *string           `json:"macro,omitempty"     url:"macro,omitempty"`
-	Proto    *string           `json:"proto,omitempty"     url:"proto,omitempty"`
-	Source   *string           `json:"source,omitempty"    url:"source,omitempty"`
-	SPort    *string           `json:"sport,omitempty"     url:"sport,omitempty"`
+	Macro    *string           `json:"macro"     url:"macro"`
+	Proto    *string           `json:"proto"     url:"proto"`
+	Source   *string           `json:"source"    url:"source"`
+	SPort    *string           `json:"sport"     url:"sport"`
 }
 
 func (c *Client) rulesPath() string {
